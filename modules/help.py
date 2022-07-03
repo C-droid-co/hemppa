@@ -66,7 +66,7 @@ class MatrixModule(BotModule):
                         msg = msg + ': ' + moduleobject.help() + '\n'
                     except AttributeError:
                         pass
-            msg = msg + '\n' + self.info
+            msg = msg + '\n' + "Thank U"
         if self.msg_users:
             await bot.send_msg(event.sender, f'Chat with {bot.matrix_user}', msg)
         else:
