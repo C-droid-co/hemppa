@@ -16,4 +16,4 @@ COPY modules modules
 
 VOLUME /bot/config
 
-CMD [ "python", "-u", "yes" ]
+CMD [ "python", "-u", "./bot.py" ]
