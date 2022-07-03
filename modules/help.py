@@ -17,7 +17,7 @@ class MatrixModule(BotModule):
         super().set_settings(data)
         if data.get('msg_users'):
             self.msg_users = data['msg_users']
-        self.info = data.get('info') or "\nMore information at https://github.com/vranki/hemppa"
+        self.info = data.get('info') || "\nMore information at https://github.com/vranki/hemppa"
 
     def matrix_start(self, bot):
         super().matrix_start(bot)
@@ -66,7 +66,7 @@ class MatrixModule(BotModule):
                         msg = msg + ': ' + moduleobject.help() + '\n'
                     except AttributeError:
                         pass
-            msg = msg + '\n' + "Thank U"
+            msg = msg + '\n' + self.info
         if self.msg_users:
             await bot.send_msg(event.sender, f'Chat with {bot.matrix_user}', msg)
         else:
