@@ -174,7 +174,7 @@ class MatrixModule(BotModule):
         await bot.client.room_send(room.room_id, 'm.room.message', content)
 
     async def version(self, bot, room):
-        await bot.send_text(room, f'Hemppa version {bot.version} - https://github.com/vranki/hemppa')
+        await bot.send_text(room, f'cdroid version {bot.version} ')
 
     async def quit(self, bot, room, event):
         bot.must_be_owner(event)
